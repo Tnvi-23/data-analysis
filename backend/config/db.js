@@ -14,11 +14,15 @@ function classify(error) {
   return message;
 }
 function errorDetails(error) {
+  const reason = error?.reason;
+  const reasonSummary = reason && typeof reason === 'object'
+    ? Object.fromEntries(Object.entries(reason).slice(0, 8).map(([key, value]) => [key, typeof value === 'object' ? (value?.type || value?.name || String(value)) : value]))
+    : reason || error?.cause?.message || null;
   return {
     name: error?.name || 'Error',
     code: error?.code || error?.cause?.code || null,
     message: error?.message || error?.cause?.message || 'unknown error',
-    reason: error?.reason ? String(error.reason).slice(0, 240) : null
+    reason: reasonSummary
   };
 }
 mongoose.connection.on('connected', () => console.log(`MongoDB connected successfully to "${mongoose.connection.name}"`));
