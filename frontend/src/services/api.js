@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+const configuredBaseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+// Accept either a complete /api URL or a server origin, while ensuring every
+// request uses exactly one /api prefix.
+const baseURL = `${configuredBaseURL.replace(/\/+$/, '').replace(/\/api$/, '')}/api`;
 
 const api = axios.create({
   baseURL,

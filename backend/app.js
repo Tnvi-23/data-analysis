@@ -17,11 +17,16 @@ const app = express();
 
 app.use(helmet());
 
-// Configure CORS with exact frontend origin and credentials enabled
-const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
+// Allow the deployed frontend plus local development origins. Keep credentials
+// enabled because authentication uses HTTP-only cookies; never use '*'.
+const allowedOrigins = (process.env.CLIENT_URLS || process.env.CLIENT_URL || 'http://localhost:5173,https://stirring-panda-bd0c1b.netlify.app')
+  .split(',').map((origin) => origin.trim().replace(/\/$/, '')).filter(Boolean);
 app.use(
   cors({
-    origin: clientUrl,
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin.replace(/\/$/, ''))) return callback(null, true);
+      return callback(new Error('CORS origin not allowed'));
+    },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
