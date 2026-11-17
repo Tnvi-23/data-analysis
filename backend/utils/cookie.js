@@ -4,14 +4,20 @@
 
 const isProduction = process.env.NODE_ENV === 'production';
 
+function isCrossSiteProductionRequest(req) {
+  const origin = req?.get?.('origin') || '';
+  return isProduction || /^https:\/\//i.test(origin);
+}
+
 /**
  * Standard cookie configuration for setting the JWT auth token
  */
-const getAuthCookieOptions = () => {
+const getAuthCookieOptions = (req) => {
+  const crossSite = isCrossSiteProductionRequest(req);
   return {
     httpOnly: true,
-    secure: isProduction,
-    sameSite: isProduction ? 'none' : 'lax',
+    secure: crossSite,
+    sameSite: crossSite ? 'none' : 'lax',
     maxAge: 24 * 60 * 60 * 1000, // 24 hours (1 day)
     path: '/'
   };
@@ -20,11 +26,12 @@ const getAuthCookieOptions = () => {
 /**
  * Cookie configuration for clearing the JWT auth token
  */
-const getClearCookieOptions = () => {
+const getClearCookieOptions = (req) => {
+  const crossSite = isCrossSiteProductionRequest(req);
   return {
     httpOnly: true,
-    secure: isProduction,
-    sameSite: isProduction ? 'none' : 'lax',
+    secure: crossSite,
+    sameSite: crossSite ? 'none' : 'lax',
     path: '/'
   };
 };

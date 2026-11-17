@@ -52,7 +52,7 @@ const register = async (req, res, next) => {
     const token = signToken(user._id);
 
     // Set token in secure HTTP-only cookie
-    res.cookie('token', token, getAuthCookieOptions());
+    res.cookie('token', token, getAuthCookieOptions(req));
 
     return res.status(201).json({
       success: true,
@@ -112,7 +112,7 @@ const login = async (req, res, next) => {
     const token = signToken(user._id);
 
     // Set token in secure HTTP-only cookie
-    res.cookie('token', token, getAuthCookieOptions());
+    res.cookie('token', token, getAuthCookieOptions(req));
 
     return res.status(200).json({
       success: true,
@@ -143,7 +143,7 @@ const getMe = async (req, res) => {
 // @route   POST /api/auth/logout
 // @access  Public (or Private)
 const logout = async (req, res) => {
-  res.clearCookie('token', getClearCookieOptions());
+  res.clearCookie('token', getClearCookieOptions(req));
   return res.status(200).json({
     success: true,
     message: 'Logged out successfully'

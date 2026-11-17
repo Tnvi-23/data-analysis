@@ -16,6 +16,7 @@ const aiRoutes = require('./routes/aiRoutes');
 const app = express();
 
 app.use(helmet());
+app.set('trust proxy', 1);
 
 // Allow the deployed frontend plus local development origins. Keep credentials
 // enabled because authentication uses HTTP-only cookies; never use '*'.
