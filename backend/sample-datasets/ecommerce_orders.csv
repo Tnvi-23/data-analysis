@@ -1,0 +1,21 @@
+OrderID,Category,ItemName,OrderValue,DiscountPercent,PaymentMethod,DeliveryDays,ReturnStatus
+ORD9001,Electronics,Wireless ANC Headphones,249.99,10,Credit Card,2,No
+ORD9002,Apparel,Merino Wool Sweater,89.50,0,Apple Pay,3,No
+ORD9003,Home & Kitchen,Espresso Machine Pro,499.00,15,Credit Card,1,No
+ORD9004,Books,Data Architecture Guide,42.00,5,PayPal,4,No
+ORD9005,Electronics,Smart 4K Monitor 27in,379.99,20,Credit Card,2,No
+ORD9006,Fitness,Ergonomic Yoga Mat,38.00,0,Debit Card,3,No
+ORD9007,Apparel,Running Shoes Carbon,165.00,10,Apple Pay,2,Yes
+ORD9008,Home & Kitchen,Air Fryer Oven 6Qt,119.00,25,Credit Card,3,No
+ORD9009,Electronics,Mechanical Keyboard RGB,129.99,0,Credit Card,1,No
+ORD9010,Beauty,Hydrating Facial Serum,55.00,5,PayPal,2,No
+ORD9011,Fitness,Adjustable Dumbbell Set,220.00,15,Credit Card,4,No
+ORD9012,Electronics,USB-C Dual Dock 100W,89.99,10,Apple Pay,2,No
+ORD9013,Apparel,Waterproof Shell Jacket,195.00,0,Credit Card,3,No
+ORD9014,Home & Kitchen,Chef Knife 8-inch,79.00,10,PayPal,2,No
+ORD9015,Electronics,Noise Cancelling Earbuds,149.99,15,Credit Card,1,No
+ORD9016,Books,Designing Data-Intensive Apps,58.00,0,Debit Card,3,No
+ORD9017,Beauty,Sunscreen Mineral SPF50,32.00,0,Apple Pay,2,No
+ORD9018,Fitness,Smart Fitness Tracker,99.00,20,Credit Card,2,Yes
+ORD9019,Home & Kitchen,Cast Iron Dutch Oven,84.99,5,Credit Card,3,No
+ORD9020,Electronics,Portable SSD 1TB,119.99,10,Apple Pay,1,No

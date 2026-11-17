@@ -1,0 +1,21 @@
+EmployeeID,Department,Role,ExperienceYears,Salary,PerformanceScore,ProjectsCompleted,AttritionRisk
+EMP101,Engineering,Senior Software Engineer,7.5,115000,4.8,14,Low
+EMP102,Marketing,Growth Marketing Lead,5.0,85000,4.2,9,Medium
+EMP103,Engineering,Backend Developer,3.0,78000,4.0,7,Low
+EMP104,Sales,Enterprise Account Exec,6.0,98000,4.6,18,Low
+EMP105,Design,Principal Product Designer,8.0,120000,4.9,12,Low
+EMP106,Engineering,Junior Developer,1.2,62000,3.6,4,High
+EMP107,Customer Success,CS Specialist,2.5,58000,3.9,8,Medium
+EMP108,Product,Product Manager,6.5,112000,4.7,11,Low
+EMP109,Sales,Account Manager,4.0,74000,4.1,13,Medium
+EMP110,Engineering,DevOps Architect,9.0,135000,4.9,16,Low
+EMP111,Marketing,Content Strategist,3.5,67000,3.8,6,Medium
+EMP112,Engineering,QA Automation Engineer,4.5,82000,4.3,10,Low
+EMP113,Finance,Financial Analyst,5.5,88000,4.4,8,Low
+EMP114,Customer Success,Support Lead,4.0,71000,4.0,11,Low
+EMP115,Sales,SDR Specialist,1.5,52000,3.5,15,High
+EMP116,Engineering,Data Engineer,5.0,99000,4.6,9,Low
+EMP117,Design,UI/UX Designer,3.0,73000,4.2,7,Low
+EMP118,Marketing,SEO Manager,2.8,64000,3.7,5,High
+EMP119,Engineering,Engineering Manager,11.0,155000,4.9,20,Low
+EMP120,Product,Technical Product Manager,7.0,124000,4.7,13,Low

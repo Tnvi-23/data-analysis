@@ -1,0 +1,58 @@
+:root {
+  /* Brand Palette (SaaS Theme) */
+  --color-bg: #101211;
+  --color-bg-secondary: #171B18;
+  --color-card: #1D231F;
+  --color-surface: #252D28;
+  --color-surface-hover: #2D3731;
+
+  /* Accent Colors */
+  --color-primary: #B6FF4A;          /* Electric Lime Accent */
+  --color-primary-hover: #A4F535;
+  --color-primary-glow: rgba(182, 255, 74, 0.18);
+  --color-secondary: #82D957;        /* Secondary Green */
+  --color-secondary-hover: #72C747;
+
+  /* Typography Colors */
+  --color-text-main: #F5F7F2;
+  --color-text-secondary: #A3ACA4;
+  --color-text-muted: #747E76;
+  --color-text-inverse: #101211;
+
+  /* Structural & Functional Colors */
+  --color-border: #303A32;
+  --color-border-focus: #B6FF4A;
+  --color-border-light: #262F28;
+  --color-success: #59C785;
+  --color-success-bg: rgba(89, 199, 133, 0.12);
+  --color-warning: #F2B84B;
+  --color-warning-bg: rgba(242, 184, 75, 0.12);
+  --color-error: #E66C6C;
+  --color-error-bg: rgba(230, 108, 108, 0.12);
+  --color-info: #5CA6FF;
+  --color-info-bg: rgba(92, 166, 255, 0.12);
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-accent: 0 0 25px rgba(182, 255, 74, 0.22);
+  --shadow-dropdown: 0 14px 36px rgba(0, 0, 0, 0.7);
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Layout dimensions */
+  --sidebar-width: 270px;
+  --header-height: 70px;
+}

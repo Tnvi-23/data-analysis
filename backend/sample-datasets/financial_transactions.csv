@@ -1,0 +1,21 @@
+TransactionID,TransactionType,Amount,OriginBalance,RiskScore,FraudFlag,Channel
+TX-5001,Transfer,1450.00,18500.00,12,No,Mobile App
+TX-5002,Payment,84.50,4200.00,4,No,Point of Sale
+TX-5003,Withdrawal,500.00,7600.00,8,No,ATM
+TX-5004,Transfer,9800.00,10200.00,78,Yes,Online Web
+TX-5005,Payment,340.00,3100.00,15,No,Point of Sale
+TX-5006,Payment,1250.00,5400.00,22,No,Mobile App
+TX-5007,Transfer,4800.00,28000.00,18,No,Online Web
+TX-5008,Withdrawal,800.00,1200.00,35,No,ATM
+TX-5009,Payment,45.00,890.00,2,No,Point of Sale
+TX-5010,Transfer,15000.00,16500.00,88,Yes,Online Web
+TX-5011,Payment,620.00,9400.00,14,No,Mobile App
+TX-5012,Withdrawal,200.00,3800.00,6,No,ATM
+TX-5013,Payment,95.00,1450.00,5,No,Point of Sale
+TX-5014,Transfer,2200.00,11000.00,16,No,Online Web
+TX-5015,Payment,180.00,2600.00,8,No,Mobile App
+TX-5016,Transfer,7400.00,7900.00,74,Yes,Mobile App
+TX-5017,Payment,510.00,6700.00,11,No,Point of Sale
+TX-5018,Withdrawal,400.00,2100.00,9,No,ATM
+TX-5019,Transfer,3100.00,14200.00,19,No,Online Web
+TX-5020,Payment,75.00,3300.00,3,No,Point of Sale
