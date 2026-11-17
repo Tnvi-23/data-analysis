@@ -19,8 +19,13 @@ app.use(helmet());
 
 // Allow the deployed frontend plus local development origins. Keep credentials
 // enabled because authentication uses HTTP-only cookies; never use '*'.
-const allowedOrigins = (process.env.CLIENT_URLS || process.env.CLIENT_URL || 'http://localhost:5173,https://stirring-panda-bd0c1b.netlify.app')
-  .split(',').map((origin) => origin.trim().replace(/\/$/, '')).filter(Boolean);
+const configuredOrigins = [process.env.CLIENT_URLS, process.env.CLIENT_URL]
+  .filter(Boolean).flatMap((value) => value.split(','));
+const allowedOrigins = [...new Set([
+  'http://localhost:5173',
+  'https://stirring-panda-bd0c1b.netlify.app',
+  ...configuredOrigins
+].map((origin) => origin.trim().replace(/\/$/, '')).filter(Boolean))];
 app.use(
   cors({
     origin(origin, callback) {
